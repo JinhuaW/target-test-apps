@@ -1,6 +1,6 @@
 
 #TARGETS=disable_interrupt epoll poll select misc_test
-TARGETS=misc_test misc_test_cli
+TARGETS=misc_test misc_test_cli link_bin_to_capp
 
 BUILDROOT_OUTPUT=$(BUILDROOT)/output
 CC := $(TARGET_CROSS)gcc

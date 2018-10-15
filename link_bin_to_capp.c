@@ -4,12 +4,15 @@
 #include <elf.h>
 
 asm(".balign 4096");
+//asm(".global _binary__module_start"); //to use it in other files, need to make it global.
 asm("_binary__module_start:");
+
 asm(".incbin \"test.txt\"");
+//asm(".global _binary__module_end");
 asm("_binary__module_end:");
 
-extern char _binary__module_start[];
-extern char _binary__module_end[];
+extern unsigned char _binary__module_start[];
+extern unsigned char _binary__module_end[];
 
 int main(int argc, char *argv[])
 {
